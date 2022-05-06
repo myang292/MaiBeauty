@@ -9,6 +9,8 @@ MaiBeauty is a full-stack app that allows users to add, remove and update the co
 
 ### Technologies Used
 - React
+- Django
+- Auth
 
 ### Links
 [Trello Board](https://trello.com/b/211zrxVi/maibeauty)  
