@@ -1,0 +1,11 @@
+{% extends 'maibeauty/base.html' %} {% block content %}
+
+<h2>Faces</h2>
+<ul>
+  {% for face in faces %}
+  <li>
+    <a href="{% url 'face_detail' pk=face.pk %}">{{ face.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'maibeauty/base.html' %} {% block content %}
+
+<h2>Foundations</h2>
+<ul>
+  {% for foundation in foundations %}
+  <li>
+    <a href="">{{ foundation.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,4 +1,4 @@
-# MaiBelle
+# MaiBeauty
 ## Michelle Yang 
 [LinkedIn](https://www.linkedin.com/in/myang292/) | [Github](https://github.com/myang292)
 

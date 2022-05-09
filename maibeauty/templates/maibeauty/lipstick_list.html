@@ -1,0 +1,11 @@
+{% extends 'maibeauty/base.html' %} {% block content %}
+
+<h2>Lipsticks</h2>
+<ul>
+  {% for lipstick in lipsticks %}
+  <li>
+    <a href="">{{ lipstick.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
