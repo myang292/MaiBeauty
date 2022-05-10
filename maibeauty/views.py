@@ -1,67 +1,74 @@
-from django.shortcuts import render, redirect
+from rest_framework import generics
+from .serializers import MakeupSerializer, FaceSerializer, FoundationSerializer, BronzerSerializer, EyeSerializer, BrowSerializer, LipSerializer, LipstickSerializer
 from .models import Makeup, Face, Foundation, Bronzer, Eye, Brow, Lip, Lipstick
-from .forms import MakeupForm
 
-def makeup_list(request):
-    makeups = Makeup.objects.all()
-    return render(request, 'maibeauty/makeup_list.html', {'makeups': makeups})
+class MakeupList(generics.ListCreateAPIView):
+    queryset = Makeup.objects.all()
+    serializer_class = MakeupSerializer
 
-def makeup_detail(request, pk):
-    makeup = Makeup.objects.get(id=pk)
-    return render(request, 'maibeauty/makeup_detail.html', {'makeup': makeup})
-
-# def makeup_create(request):
-#     if request.method == 'POST':
-#         form = MakeupForm(request.POST)
-#         if form.is_valid():
-#             makeup = form.save()
-#             return redirect('makeup_detail', pk=makeup.pk)
-#     else:
-#         form = MakeupForm()
-#     return render(request, 'maibeauty/makeup_form.html', {'form': form})
+class MakeupDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Makeup.objects.all()
+    serialize_class = MakeupSerializer
 
 
-def face_list(request):
-    faces = Face.objects.all()
-    return render(request, 'maibeauty/face_list.html', {'faces': faces})
+class FaceList(generics.ListCreateAPIView):
+    queryset = Face.objects.all()
+    serializer_class = FaceSerializer
 
-def face_detail(request, pk):
-    face = Face.objects.get(id=pk)
-    return render(request, 'maibeauty/face_detail.html', {'face': face})
-
-
-def foundation_list(request):
-    foundations = Foundation.objects.all()
-    return render(request, 'maibeauty/foundation_list.html', {'foundations': foundations})
-
-def bronzer_list(request):
-    bronzers = Bronzer.objects.all()
-    return render(request, 'maibeauty/bronzer_list.html', {'bronzers': bronzers})
+class FaceDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Face.objects.all()
+    serialize_class = FaceSerializer
 
 
-def eye_list(request):
-    eyes = Eye.objects.all()
-    return render(request, 'maibeauty/eye_list.html', {'eyes': eyes})
+class FoundationList(generics.ListCreateAPIView):
+    queryset = Foundation.objects.all()
+    serializer_class = FoundationSerializer
 
-def eye_detail(request, pk):
-    eye = Eye.objects.get(id=pk)
-    return render(request, 'maibeauty/eye_detail.html', {'eye': eye})
-
-
-def brow_list(request):
-    brows = Brow.objects.all()
-    return render(request, 'maibeauty/brow_list.html', {'brows': brows})
+class FoundationDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Foundation.objects.all()
+    serialize_class = FoundationSerializer
 
 
-def lip_list(request):
-    lips = Lip.objects.all()
-    return render(request, 'maibeauty/lip_list.html', {'lips': lips})
+class BronzerList(generics.ListCreateAPIView):
+    queryset = Bronzer.objects.all()
+    serializer_class = BronzerSerializer
 
-def lip_detail(request, pk):
-    lip = Lip.objects.get(id=pk)
-    return render(request, 'maibeauty/lip_detail.html', {'lip': lip})
+class ronzerDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Bronzer.objects.all()
+    serialize_class = BronzerSerializer
 
 
-def lipstick_list(request):
-    lipsticks = Lipstick.objects.all()
-    return render(request, 'maibeauty/lipstick_list.html', {'lipsticks': lipsticks})
+class EyeList(generics.ListCreateAPIView):
+    queryset = Eye.objects.all()
+    serializer_class = EyeSerializer
+
+class EyeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Eye.objects.all()
+    serialize_class = EyeSerializer
+
+
+class BrowList(generics.ListCreateAPIView):
+    queryset = Brow.objects.all()
+    serializer_class = BrowSerializer
+
+class BrowDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Brow.objects.all()
+    serialize_class = BrowSerializer
+
+
+class LipList(generics.ListCreateAPIView):
+    queryset = Lip.objects.all()
+    serializer_class = LipSerializer
+
+class LipDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Lip.objects.all()
+    serialize_class = LipSerializer
+
+
+class LipstickList(generics.ListCreateAPIView):
+    queryset = Lipstick.objects.all()
+    serializer_class = LipstickSerializer
+
+class LipstickDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Lipstick.objects.all()
+    serialize_class = LipstickSerializer

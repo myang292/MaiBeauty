@@ -49,7 +49,7 @@ class Brow(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     photo_url = models.TextField()
-    makeup = models.ForeignKey(Eye, on_delete=models.CASCADE, related_name='eyes', null = True, blank = True)
+    eye = models.ForeignKey(Eye, on_delete=models.CASCADE, related_name='eyes', null = True, blank = True)
 
     def __str__(self):
         return self.name
