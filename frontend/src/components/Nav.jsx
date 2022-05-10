@@ -7,7 +7,7 @@ const Nav = () => {
     return(
         <div>
             <header>
-                <nav>
+                <nav className='nav'>
                     <Link to='/'>Home</Link>
                     &nbsp;
                     <Link to='products'>Products</Link>

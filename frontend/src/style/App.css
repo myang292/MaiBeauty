@@ -23,3 +23,45 @@ h1 {
   text-align: right;
 }
 
+.nav {
+  float: left;
+  padding-left: 2%;
+  text-decoration: none;
+}
+
+.nav :hover {
+  cursor: pointer;
+}
+
+.nav :visited {
+  text-decoration: none;
+  color: black;
+}
+
+.signin {
+  float: right;
+  padding-right: 2%;
+  text-decoration: none;
+}
+
+.signin :hover {
+  cursor: pointer;
+}
+
+.signin :visited {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* HOME GRID */
+.parent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  }
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
