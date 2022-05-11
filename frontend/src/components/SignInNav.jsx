@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 
-const SignIn = () => {
+const SignInNav = () => {
 
     return(
         <div>
@@ -16,4 +16,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignInNav

@@ -31,13 +31,14 @@ const signin = (props) => {
 
     return(
         <div className='SignIn'>
-            <h1>Sign In.</h1>
+            <br />
+            <h2>Sign In.</h2>
             <form className='signin' onSubmit={handleSubmit}>
                 <div className='signInUsername'>
                     <input 
                         type='text' 
                         id='username' 
-                        placeholder='Enter your username' 
+                        placeholder='Username' 
                         name='username' 
                         onChange={handleChange} 
                         value={formValues.username}
@@ -49,7 +50,7 @@ const signin = (props) => {
                     <input 
                         type='password' 
                         id='password' 
-                        placeholder='Enter your password' 
+                        placeholder='Password' 
                         name='password' 
                         onChange={handleChange} 
                         value={formValues.password}
