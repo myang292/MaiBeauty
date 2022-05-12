@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Makeup, Face, Foundation, Bronzer, Eye, Brow, Lip, Lipstick, User
+from .models import Makeup, Face, Foundation, Bronzer, Eye, Brow, Lip, Lipstick
 
 
 class MakeupSerializer(serializers.HyperlinkedModelSerializer):

@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './style/App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AllProducts from './pages/AllProducts'
 import Face from './pages/Face'
 import Footer from './components/Footer'
@@ -11,19 +11,43 @@ import Nav from './components/Nav'
 import Lips from './pages/Lips'
 import SignInNav from './components/SignInNav'
 import SignIn from './pages/SignIn'
-import Axios from 'axios'
+import axios from 'axios'
 
 function App() {
 
-  const [foundation, setFoundation] = useState()
+  const [foundation, setFoundation] = useState([])
+  const [bronzer, setBronzer] = useState([])
+  const [brows, setBrows] = useState([])
+  const [lipstick, setLipstick] = useState([])
 
   const getFoundation = async() => {
-      const foundation = await Axios.get('http://localhost:8000/foundation')
+      const foundation = await axios.get('http://localhost:8000/foundation')
+      setFoundation(foundation.data)
+      console.log(foundation)
+  }
+  const getBronzer = async() => {
+      const bronzer = await axios.get('http://localhost:8000/bronzer')
+      setFoundation(foundation.data)
+      console.log(foundation)
+  }
+  const getBrow = async() => {
+      const foundation = await axios.get('http://localhost:8000/brows')
+      setFoundation(foundation.data)
+      console.log(foundation)
+  }
+  const getLipstick = async() => {
+      const foundation = await axios.get('http://localhost:8000/lipsticks')
       setFoundation(foundation.data)
       console.log(foundation)
   }
 
 
+  useEffect(() => {
+    getFoundation()
+    getBronzer()
+    getBrow()
+    getLipstick()
+  }, [])
 
   return (
     <div className="App">
