@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import './style/App.css';
 import { useEffect, useState } from 'react';
 import AllProducts from './pages/AllProducts'
+import Brows from './pages/Brows'
+import Eyes from './pages/Eyes'
 import Face from './pages/Face'
 import Footer from './components/Footer'
 import Foundation from './pages/Foundation'
@@ -27,17 +29,17 @@ function App() {
   }
   const getBronzer = async() => {
       const bronzer = await axios.get('http://localhost:8000/bronzer')
-      setFoundation(foundation.data)
+      setBronzer(foundation.data)
       console.log(foundation)
   }
-  const getBrow = async() => {
+  const getBrows = async() => {
       const foundation = await axios.get('http://localhost:8000/brows')
-      setFoundation(foundation.data)
+      setBrows(foundation.data)
       console.log(foundation)
   }
   const getLipstick = async() => {
       const foundation = await axios.get('http://localhost:8000/lipsticks')
-      setFoundation(foundation.data)
+      setLipstick(foundation.data)
       console.log(foundation)
   }
 
@@ -45,7 +47,7 @@ function App() {
   useEffect(() => {
     getFoundation()
     getBronzer()
-    getBrow()
+    getBrows()
     getLipstick()
   }, [])
 
@@ -60,11 +62,14 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/brows' element={<Brows brows={brows}/>} />
+          <Route path='/eyes' element={<Eyes />} />
+          <Route path='/face' element={<Face foundation={foundation} bronzer={bronzer}/>} />
+          <Route path='/foundation' element={<Foundation />} />
+          <Route path='/lips' element={<Lips lipstick={lipstick}/>} />
           <Route path='/products' element={<AllProducts />} />
           <Route path='/signin' element={<SignIn />} />
-          <Route path='/lips' element={<Lips />} />
-          <Route path='/face' element={<Face foundation={foundation}/>} />
-          <Route path='/foundation' element={<Foundation />} />
+          {/* <Route path='/bronzer' element={<Bronzer bronzer={bronzer}/>} /> */}
         </Routes>
       </main>
     </div>
