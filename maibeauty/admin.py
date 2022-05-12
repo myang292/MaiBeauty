@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import Makeup, Face, Foundation, Bronzer, Eye, Brow, Lip, Lipstick
+from .models import User, Makeup, Face, Foundation, Bronzer, Eye, Brow, Lip, Lipstick
 
-class UserAdmin(admin.ModelAdmin):
-    model = User
 
 admin.site.register(User, UserAdmin)
 admin.site.register(Makeup)

@@ -10,7 +10,7 @@ pylint-django = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 djangorestframework-simplejwt = "*"
-python-dotevn = "*"
+
 
 [dev-packages]
 
