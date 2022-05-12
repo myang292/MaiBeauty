@@ -1,18 +1,26 @@
 
 import { useNavigate } from 'react-router-dom'
+import Axios from 'axios'
+import { useState } from 'react'
 
 
 const Face = () => {
 
-    let navigate = useNavigate()
-    const foundation = () => {
-        navigate('/foundation')
+
+    const [foundation, setFoundation] = useState()
+
+    const getFoundation = async() => {
+        const foundation = await Axios.get('http://localhost:8000/foundation')
+        setFoundation(foundation.data)
+        console.log(foundation)
     }
+
+
 
     return(
         <div className='typesParent'>
             <div className="types1">
-                <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' onClick={foundation}/>
+                <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' />
                 <h3>Foundation</h3>
             </div>
             <div className="types2">
