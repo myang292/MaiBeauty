@@ -1,8 +1,8 @@
 import React, {useEffect, useContext} from 'react';
 import { useNavigate } from 'react-router-dom'
-import {LoginContext} from '../ContextFiles/LoginContext'
+import {LoginContext} from '../LoginContext'
 
-import AxiosInstance from '../Axios'
+import AxiosInstance from '../AxiosInstance'
 
 
 function Logout(props) {

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import AxiosInstance from '../AxiosInstance'
-import {LoginContext} from '../ContextFiles/LoginContext'
+import {LoginContext} from '../LoginContext'
 
 function Register() {
 
