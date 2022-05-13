@@ -1,9 +1,7 @@
 const Router = require('express').Router()
-// const controller = require('../controller/AllController')
-// const middleware = require('../middleware')
 
 
-Router.get('/face')
+Router.get('/face', controller.GetFaceProducts)
 Router.get('/foundation')
 Router.get('/bronzer')
 Router.get('/brows')
