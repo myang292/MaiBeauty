@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 
 
-const Face = (props, foundation) => {
+const Face = (props) => {
 
 
     // const [foundations, setFoundations] = useState()
@@ -20,13 +20,19 @@ const Face = (props, foundation) => {
     //     getFoundations()
     //   }, [])
 
+    let navigate = useNavigate()
+    const foundation = () => {
+        navigate('/foundation')
+    }
+
+
 console.log(foundation)
 console.log(props.foundation)
 
     return(
         <div className='typesParent'>
             <div className="types1">
-                <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' />
+                <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' onClick={foundation}/>
                 <h3>Foundation</h3>
             </div>
             <div>
