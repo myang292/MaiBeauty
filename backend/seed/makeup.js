@@ -64,46 +64,46 @@ const brows = [
 ]
 const foundations = [
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Almond',
+    description: 'A light coverage cream foundation with a silky powder finish with anti-aging and wrinkle-reducing properties.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_2b4c3fe0764944b8820131a257aa5431~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     },
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Beige',
+    description: 'A light coverage cream foundation with a silky powder finish with anti-aging and wrinkle-reducing properties.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_02adb50030a7432682bd79afbff26322~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     },
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Caramel',
+    description: 'A light coverage cream foundation with a silky powder finish with anti-aging and wrinkle-reducing properties.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_5097e10546f14791bcff06852777ee0f~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     },
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Mocha',
+    description: 'A light coverage cream foundation with a silky powder finish with anti-aging and wrinkle-reducing properties.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_9ededbd5eba8492c84cf884af5783e7d~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     }
 ]
 const lipsticks = [
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Caress',
+    description: 'A pinky-nude soft matte lipstick infused with Vitamin E and jojoba oil to hydrate and moisturize lips.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_272f75ad42634f9896680f940f8d3ea8~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     },
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Brown Sugar',
+    description: 'A brown-nude soft matte lipstick infused with Vitamin E and jojoba oil to hydrate and moisturize lips.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_e56cbf8ce6814e749d48784383baf47a~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     },
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Franky Scarlet',
+    description: 'A deep scarlet soft matte lipstick infused with Vitamin E and jojoba oil to hydrate and moisturize lips.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_1dafa45219a94ceba8489251ca694006~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     },
     {
-    name: '',
-    description: '',
-    photoUrl: ''
+    name: 'Well Red',
+    description: 'A true red soft matte lipstick infused with Vitamin E and jojoba oil to hydrate and moisturize lips.',
+    photoUrl: 'https://static.wixstatic.com/media/d8d143_f805915d358646bab4731444ccf52551~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg'
     }
 ]
 
