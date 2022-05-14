@@ -1,24 +1,24 @@
 const db = require('../db')
-const { Bronzer, Brow, Foundation, Lipstick } = require('../models')
+const { Bronzer, Brow, Foundation, Lipstick, Makeup } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
     const eyes = await new Makeup({
-        name: '',
-        description: ''
+        name: 'eyes',
+        description: 'Makeup for the eyes'
     })
     eyes.save()
 
     const face = await new Makeup({
-        name: '',
-        description: ''
+        name: 'face',
+        description: 'Makeup for the face'
     })
     face.save()
 
     const lips = await new Makeup({
-        name: '',
-        description: ''
+        name: 'lips',
+        description: 'Makeup for the lips'
     })
     lips.save()
 
@@ -113,7 +113,7 @@ await Bronzer.insertMany(bronzers)
 await Brow.insertMany(brows)
 await Foundation.insertMany(foundations)
 await Lipstick.insertMany(lipsticks)
-console.log('Pokemon are here')
+console.log('Makeup inserted!')
 }
 
 const run = async () => {

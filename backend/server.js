@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
-const { Bronzer, Brow, Foundation, Lipstick, Makeup } = require('../models')
+const { Bronzer, Brow, Foundation, Lipstick, Makeup } = require('./models')
 const app = express()
 const db = require('./db')
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/bronzer', async (req, res) => {
-    const allBronzer = await Bronzer.find({});
+    const allBronzers = await Bronzer.find({});
     res.send(allBronzers);
 })
 
