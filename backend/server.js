@@ -15,46 +15,46 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/bronzer', async (req, res) => {
-    const allPokemons = await Pokemon.find({});
+    const allBronzer = await Bronzer.find({});
     res.send(allBronzers);
 })
 
 app.get('/api/bronzer/:id', async (req, res) => {
     const { id } = req.params;
-    const onePokemon = await Pokemon.findById(id)
+    const oneBronzer = await Bronzer.findById(id)
     res.json(oneBronzer)
 })
 
 app.get('/api/brow', async (req, res) => {
-    const allPokemons = await Pokemon.find({});
+    const allBrows = await Brow.find({});
     res.send(allBrows);
 })
 
 app.get('/api/brow/:id', async (req, res) => {
     const { id } = req.params;
-    const onePokemon = await Pokemon.findById(id)
+    const oneBrow = await Brow.findById(id)
     res.json(oneBrow)
 })
 
 app.get('/api/foundation', async (req, res) => {
-    const allPokemons = await Pokemon.find({});
+    const allFoundations = await Foundation.find({});
     res.send(allFoundations);
 })
 
 app.get('/api/foundation/:id', async (req, res) => {
     const { id } = req.params;
-    const onePokemon = await Pokemon.findById(id)
+    const oneFoundation = await Foundation.findById(id)
     res.json(oneFoundation)
 })
 
 app.get('/api/lipstick', async (req, res) => {
-    const allPokemons = await Pokemon.find({});
+    const allLipsticks = await Lipstick.find({});
     res.send(allLipsticks);
 })
 
 app.get('/api/lipstick/:id', async (req, res) => {
     const { id } = req.params;
-    const onePokemon = await Pokemon.findById(id)
+    const oneLipstick = await Lipstick.findById(id)
     res.json(oneLipstick)
 })
 
@@ -76,28 +76,28 @@ app.get('/api/makeup/:id', async (req, res) => {
 
 // CRUD!!!!
 
-app.post('/api/add-pokemon', async (req, res) => {
-        const addNewPokemon = await req.body
-            Pokemon.insertMany(addNewPokemon)
-            return res.status(201).json({Pokemon})
-    })
+// app.post('/api/add-reivew', async (req, res) => {
+//         const addReview = await req.body
+//             Pokemon.insertMany(addReview)
+//             return res.status(201).json({Pokemon})
+//     })
 
-app.put('/api/pokemons/:id', async (req, res) => {
-    const { num, name, img, type, height, weight, weakness } = await req.body;
-    try {
-    const updateOne = await Pokemon.findByIdAndUpdate(req.params.id, { num, name, img, type, height, weight, weakness }, {new:true})
-    res.status(200).send('update working')
-    } catch (e) {
-        return res.status(500).json({error:e.message})
-    }
-})
+// app.put('/api/pokemons/:id', async (req, res) => {
+//     const { num, name, img, type, height, weight, weakness } = await req.body;
+//     try {
+//     const updateOne = await Pokemon.findByIdAndUpdate(req.params.id, { num, name, img, type, height, weight, weakness }, {new:true})
+//     res.status(200).send('update working')
+//     } catch (e) {
+//         return res.status(500).json({error:e.message})
+//     }
+// })
 
-app.delete('/api/pokemons/:id', async (req, res) => {
-    const { id } = req.params;
-    const deleteOne = await Pokemon.findByIdAndDelete(req.params.id)
-    return res.send(deleteOne)
-    console.log('delete works')
-})
+// app.delete('/api/pokemons/:id', async (req, res) => {
+//     const { id } = req.params;
+//     const deleteOne = await Pokemon.findByIdAndDelete(req.params.id)
+//     return res.send(deleteOne)
+//     console.log('delete works')
+// })
 
 
 app.listen(PORT, () => {
