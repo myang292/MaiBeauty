@@ -23,22 +23,22 @@ function App() {
   const [lipstick, setLipstick] = useState([])
 
   const getFoundation = async() => {
-      const foundation = await axios.get('http://localhost:8000/foundation')
+      const foundation = await axios.get('http://localhost:3000/foundation')
       setFoundation(foundation.data)
       console.log(foundation)
   }
   const getBronzer = async() => {
-      const bronzer = await axios.get('http://localhost:8000/bronzer')
+      const bronzer = await axios.get('http://localhost:3000/bronzer')
       setBronzer(foundation.data)
       console.log(foundation)
   }
   const getBrows = async() => {
-      const foundation = await axios.get('http://localhost:8000/brows')
+      const foundation = await axios.get('http://localhost:3000/brows')
       setBrows(foundation.data)
       console.log(foundation)
   }
   const getLipstick = async() => {
-      const foundation = await axios.get('http://localhost:8000/lipsticks')
+      const foundation = await axios.get('http://localhost:3000/lipsticks')
       setLipstick(foundation.data)
       console.log(foundation)
   }

@@ -5,20 +5,21 @@ import { useEffect, useState } from 'react';
 
 
 
-const Face = (props) => {
+const Face = () => {
+// const Face = (props, foundations) => {
 
 
-    // const [foundations, setFoundations] = useState()
+    const [foundations, setFoundations] = useState()
 
-    // const getFoundations = async() => {
-    //     const foundation = await axios.get('http://localhost:8000/foundation')
-    //     setFoundations(foundation.data)
-    //     console.log(foundation)
-    // }
+    const getFoundations = async() => {
+        const foundation = await axios.get('http://localhost:3000/foundation')
+        setFoundations(foundation.data)
+        console.log(foundation)
+    }
 
-    // useEffect(() => {
-    //     getFoundations()
-    //   }, [])
+    useEffect(() => {
+        getFoundations()
+      }, [])
 
     let navigate = useNavigate()
     const foundation = () => {
@@ -26,8 +27,9 @@ const Face = (props) => {
     }
 
 
-console.log(foundation)
-console.log(props.foundation)
+console.log(foundations)
+// console.log(props.foundations)
+
 
     return(
         <div className='typesParent'>
@@ -35,15 +37,15 @@ console.log(props.foundation)
                 <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' onClick={foundation}/>
                 <h3>Foundation</h3>
             </div>
-            <div>
-                {props.foundation.map((foundation) => {
+            {/* <div>
+                {props.foundations.map((foundations) => {
                     return(
                         <div>
-                            {foundation.name}
+                            {foundations.name}
                         </div>
                     )
                 })}
-            </div>
+            </div> */}
             <div className="types2">
                 <img src='https://static.wixstatic.com/media/d8d143_824dbf3d62ba47c0812045ed3205bb75~mv2.jpg/v1/fill/w_350,h_348,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-bronzer.jpg' alt='' />
                 <h3>Bronzer</h3>
