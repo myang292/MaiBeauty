@@ -5,8 +5,8 @@ import Comment from '../components/Comment'
 const Bronzer = (props) => {
 
     let navigate = useNavigate()
-    const nav = () => {
-        navigate('/foundation/:id')
+    const nav = (bronzer) => {
+        navigate(`/${bronzer._id}`)
     }
 
     console.log(props)
@@ -22,7 +22,7 @@ const Bronzer = (props) => {
                         <div>
                             {bronzer.name}
                             <br />
-                            <img src={bronzer.photoUrl} alt='' />
+                            <img src={bronzer.photoUrl} alt='' onClick={() => nav(bronzer)} key={bronzer._id}/>
                             {bronzer.description}
                         </div>
                     )

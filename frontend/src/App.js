@@ -63,11 +63,13 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/bronzer' element={<Bronzer />} />
+          <Route path='/bronzer' element={<Bronzer bronzer={bronzer}/>} />
+          <Route path='/bronzer/:id' element={<Bronzer bronzer={bronzer}/>} />
           <Route path='/brows' element={<Brows />} />
           <Route path='/eyes' element={<Eyes />} />
-          <Route path='/face' element={<Face />} />
-          <Route path='/foundation' element={<Foundation />} />
+          <Route path='/face' element={<Face foundation={foundation}/>} />
+          <Route path='/foundation' element={<Foundation foundation={foundation}/>} />
+          <Route path='/foundation/:id' element={<Foundation foundation={foundation}/>} />
           <Route path='/lips' element={<Lips />} />
           <Route path='/products' element={<AllProducts />} />
           <Route path='/signin' element={<SignIn />} />

@@ -5,8 +5,8 @@ import Comment from '../components/Comment'
 const Foundation = (props) => {
 
     let navigate = useNavigate()
-    const nav = () => {
-        navigate('/foundation/:id')
+    const nav = (foundation) => {
+        navigate(`/${foundation._id}`)
     }
 
     console.log(props)
@@ -22,7 +22,7 @@ const Foundation = (props) => {
                         <div>
                             {foundation.name}
                             <br />
-                            <img src={foundation.photoUrl} alt='' />
+                            <img src={foundation.photoUrl} alt='' onClick={() => nav(foundation)} key={foundation._id}/>
                             {foundation.description}
                         </div>
                     )
