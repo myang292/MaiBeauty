@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Bronzer, Brow, Foundation, Lipstick, Makeup } = require('../models')
+const { Bronzer, Brows, Foundation, Lipstick, Makeup } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -107,10 +107,8 @@ const lipsticks = [
     }
 ]
 
-
-
 await Bronzer.insertMany(bronzers)
-await Brow.insertMany(brows)
+await Brows.insertMany(brows)
 await Foundation.insertMany(foundations)
 await Lipstick.insertMany(lipsticks)
 console.log('Makeup inserted!')
