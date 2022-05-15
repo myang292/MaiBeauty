@@ -1,21 +1,24 @@
-import { useNavigate } from 'react-router-dom'
 
-const Lips = () => {
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+// import { useEffect, useState } from 'react';
+
+
+
+const Lips = (props) => {
 
     let navigate = useNavigate()
     const nav = () => {
-        navigate(`/lipstick`)
+        navigate('/lipstick')
     }
 
+
     return(
-        <div>
-            <br />
-            <img src='https://static.wixstatic.com/media/d8d143_f805915d358646bab4731444ccf52551~mv2.jpg/v1/fill/w_313,h_313,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg' alt='' onClick={nav}/>
-            <h3>Well Red</h3>
-            <p>
-                A satin finish lipstick that is infused with Vitamin E and jojoba oil to keep your lips hydrated all day.
-            </p>
-            <button>Add to Cart</button>
+        <div className='typesParent'>
+            <div className="types1">
+                <img src='https://static.wixstatic.com/media/d8d143_f5f52a911e87403e95354ac46672ece4~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Lips-lipstick.jpg' alt='' onClick={nav}/>
+                <h3>Brows</h3>
+            </div>
         </div>
     )
 }

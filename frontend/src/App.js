@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Foundation from './pages/Foundation'
 import Home from './pages/Home'
 import Nav from './components/Nav'
+import Lips from './pages/Lips'
 import Lipstick from './pages/Lipstick'
 import SignInNav from './components/SignInNav'
 import SignIn from './pages/SignIn'
@@ -67,10 +68,11 @@ function App() {
           <Route path='/bronzer/:id' element={<Bronzer bronzer={bronzer}/>} />
           <Route path='/brows' element={<Brows brows={brows}/>} />
           <Route path='/brows/:id' element={<Brows brows={brows}/>} />
-          <Route path='/eyes' element={<Eyes />} />
-          <Route path='/face' element={<Face foundation={foundation}/>} />
+          <Route path='/eyes' element={<Eyes brows={brows}/>} />
+          <Route path='/face' element={<Face foundation={foundation} bronzer={bronzer} />} />
           <Route path='/foundation' element={<Foundation foundation={foundation}/>} />
           <Route path='/foundation/:id' element={<Foundation foundation={foundation}/>} />
+          <Route path='/lip' element={<Lips lipstick={lipstick}/>} />
           <Route path='/lipstick' element={<Lipstick lipstick={lipstick}/>} />
           <Route path='/lipstick/:id' element={<Lipstick lipstick={lipstick}/>} />
           <Route path='/products' element={<AllProducts />} />

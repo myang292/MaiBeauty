@@ -6,13 +6,13 @@ const AllProducts = () => {
 
     let navigate = useNavigate()
     const eyes = () => {
-        navigate('/face')
+        navigate('/eyes')
     }
     const face = () => {
         navigate('/face')
     }
     const lips = () => {
-        navigate('/lipstick')
+        navigate('/lip')
     }
 
     return(
