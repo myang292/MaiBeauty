@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
-const { Bronzer, Brow, Foundation, Lipstick, Makeup } = require('./models')
+const { Bronzer, Brows, Foundation, Lipstick, Makeup } = require('./models')
 const app = express()
 const db = require('./db')
 
@@ -25,14 +25,14 @@ app.get('/api/bronzer/:id', async (req, res) => {
     res.json(oneBronzer)
 })
 
-app.get('/api/brow', async (req, res) => {
-    const allBrows = await Brow.find({});
+app.get('/api/brows', async (req, res) => {
+    const allBrows = await Brows.find({});
     res.send(allBrows);
 })
 
-app.get('/api/brow/:id', async (req, res) => {
+app.get('/api/brows/:id', async (req, res) => {
     const { id } = req.params;
-    const oneBrow = await Brow.findById(id)
+    const oneBrow = await Brows.findById(id)
     res.json(oneBrow)
 })
 

@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Brow = new Schema (
+const Brows = new Schema (
     {
         name: { type: String, required: true },
         description: { type: String, required: true },
@@ -9,4 +9,4 @@ const Brow = new Schema (
     {timestamps: true}
 )
 
-module.exports = Brow
+module.exports = Brows
