@@ -29,12 +29,7 @@ const Home = () => {
                 <img src='https://static.wixstatic.com/media/d8d143_a69abe8740954d2295b802d35e27a4f1~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Eyes-brow.jpg' alt='' className='whatsNew'/>
             </div>
             <div>
-                <p>
-                    Foundation
-                    Bronzer
-                    Lipstick
-                    Brows
-                </p>
+                
             </div>
         </div>
     )

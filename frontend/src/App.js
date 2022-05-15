@@ -48,7 +48,7 @@ function App() {
   const getMakeup = async() => {
     const makeup = await axios.get('http://localhost:3001/api/makeup')
     setMakeup(makeup.data)
-    console.log(makeup)
+    // console.log(makeup)
 }
 
 
@@ -83,7 +83,12 @@ function App() {
           <Route path='/lipstick' element={<Lipstick lipstick={lipstick}/>} />
           <Route path='/lipstick/:id' element={<Lipstick lipstick={lipstick}/>} />
           <Route path='/products' element={<AllProducts makeup={makeup}/>} />
+
+
+          {/* <Route path='/cart' element={<Cart />} /> */}
           <Route path='/signin' element={<SignIn />} />
+
+
         </Routes>
       </main>
     </div>
