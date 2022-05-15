@@ -1,6 +1,6 @@
 const { model } = require('mongoose')
 const BronzerSchema = require('./bronzer')
-const BrowsSchema = require('./brow')
+const BrowsSchema = require('./brows')
 const MakeupSchema = require('./makeup')
 const FoundationSchema = require('./foundation')
 const LipstickSchema = require('./lipstick')
