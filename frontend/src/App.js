@@ -23,6 +23,7 @@ function App() {
   const [bronzer, setBronzer] = useState([])
   const [brows, setBrows] = useState([])
   const [lipstick, setLipstick] = useState([])
+  const [makeup, setMakeup] = useState([])
 
   const getFoundation = async() => {
       const foundation = await axios.get('http://localhost:3001/api/foundation')
@@ -44,6 +45,11 @@ function App() {
       setLipstick(lipstick.data)
       // console.log(lipstick)
   }
+  const getMakeup = async() => {
+    const makeup = await axios.get('http://localhost:3001/api/makeup')
+    setMakeup(makeup.data)
+    console.log(makeup)
+}
 
 
   useEffect(() => {
@@ -51,6 +57,7 @@ function App() {
     getBronzer()
     getBrows()
     getLipstick()
+    getMakeup()
   }, [])
 
   return (
@@ -75,7 +82,7 @@ function App() {
           <Route path='/lip' element={<Lips lipstick={lipstick}/>} />
           <Route path='/lipstick' element={<Lipstick lipstick={lipstick}/>} />
           <Route path='/lipstick/:id' element={<Lipstick lipstick={lipstick}/>} />
-          <Route path='/products' element={<AllProducts />} />
+          <Route path='/products' element={<AllProducts makeup={makeup}/>} />
           <Route path='/signin' element={<SignIn />} />
         </Routes>
       </main>

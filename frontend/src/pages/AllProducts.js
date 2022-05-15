@@ -2,21 +2,32 @@
 import { useNavigate } from 'react-router-dom'
 
 
-const AllProducts = () => {
+const AllProducts = (props) => {
 
     let navigate = useNavigate()
-    const eyes = () => {
-        navigate('/eyes')
-    }
-    const face = () => {
-        navigate('/face')
-    }
-    const lips = () => {
-        navigate('/lip')
+    const nav = () => {
+        navigate(`${props.makeup.name}`)
     }
 
+
+    console.log(props)
+
     return(
-        <div className='productParent'>
+        <div>
+            <div>
+                {props.makeup.map((makeup) => {
+                    return(
+                        <div>
+                            {makeup.name}
+                            <br />
+                            <img src={makeup.photoUrl} alt='' key={makeup._id} onClick={nav}/>
+                        </div>
+                    )
+                })}
+            </div>
+
+
+        {/* <div className='productParent'>
             <div className='product1'>
                 <br />
                 <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' className='products' onClick={face}/>
@@ -34,6 +45,7 @@ const AllProducts = () => {
             <div className='product4'>
                 
             </div>
+        </div> */}
         </div>
     )
 }
