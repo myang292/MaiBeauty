@@ -6,7 +6,7 @@ const Foundation = (props) => {
 
     let navigate = useNavigate()
     const nav = (foundation) => {
-        navigate(`/${foundation._id}`)
+        navigate(`${foundation._id}`)
     }
 
     console.log(props)

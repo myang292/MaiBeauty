@@ -6,7 +6,7 @@ const Brows = (props) => {
 
     let navigate = useNavigate()
     const nav = (brows) => {
-        navigate(`/${brows._id}`)
+        navigate(`${brows._id}`)
     }
 
     console.log(props)

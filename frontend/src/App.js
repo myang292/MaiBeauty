@@ -4,15 +4,19 @@ import './style/App.css';
 import { useEffect, useState } from 'react';
 import AllProducts from './pages/AllProducts'
 import Bronzer from './pages/Bronzer'
+import BronzerId from './pages/BronzerId'
 import Brows from './pages/Brows'
+import BrowsId from './pages/BrowsId'
 import Eyes from './pages/Eyes'
 import Face from './pages/Face'
 import Footer from './components/Footer'
 import Foundation from './pages/Foundation'
+import FoundationId from './pages/FoundationId'
 import Home from './pages/Home'
 import Nav from './components/Nav'
 import Lips from './pages/Lips'
 import Lipstick from './pages/Lipstick'
+import LipstickId from './pages/LipstickId'
 import SignInNav from './components/SignInNav'
 import SignIn from './pages/SignIn'
 import axios from 'axios'
@@ -72,16 +76,16 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/bronzer' element={<Bronzer bronzer={bronzer}/>} />
-          <Route path='/bronzer/:id' element={<Bronzer bronzer={bronzer}/>} />
+          <Route path='/bronzer/:id' element={<BronzerId bronzer={bronzer}/>} />
           <Route path='/brows' element={<Brows brows={brows}/>} />
-          <Route path='/brows/:id' element={<Brows brows={brows}/>} />
+          <Route path='/brows/:id' element={<BrowsId brows={brows}/>} />
           <Route path='/eyes' element={<Eyes brows={brows}/>} />
           <Route path='/face' element={<Face foundation={foundation} bronzer={bronzer} />} />
           <Route path='/foundation' element={<Foundation foundation={foundation}/>} />
-          <Route path='/foundation/:id' element={<Foundation foundation={foundation}/>} />
+          <Route path='/foundation/:id' element={<FoundationId foundation={foundation}/>} />
           <Route path='/lip' element={<Lips lipstick={lipstick}/>} />
           <Route path='/lipstick' element={<Lipstick lipstick={lipstick}/>} />
-          <Route path='/lipstick/:id' element={<Lipstick lipstick={lipstick}/>} />
+          <Route path='/lipstick/:id' element={<LipstickId lipstick={lipstick}/>} />
           <Route path='/products' element={<AllProducts makeup={makeup}/>} />
 
 

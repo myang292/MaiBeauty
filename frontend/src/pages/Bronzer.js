@@ -6,7 +6,7 @@ const Bronzer = (props) => {
 
     let navigate = useNavigate()
     const nav = (bronzer) => {
-        navigate(`/${bronzer._id}`)
+        navigate(`${bronzer._id}`)
     }
 
     console.log(props)

@@ -6,7 +6,7 @@ const Lipstick = (props) => {
 
     let navigate = useNavigate()
     const nav = (lipstick) => {
-        navigate(`/${lipstick._id}`)
+        navigate(`${lipstick._id}`)
     }
 
     console.log(props)
