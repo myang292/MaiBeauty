@@ -7,6 +7,7 @@ import Bronzer from './pages/Bronzer'
 import BronzerId from './pages/BronzerId'
 import Brows from './pages/Brows'
 import BrowsId from './pages/BrowsId'
+import Cart from './pages/Cart'
 import Eyes from './pages/Eyes'
 import Face from './pages/Face'
 import Footer from './components/Footer'
@@ -89,7 +90,7 @@ function App() {
           <Route path='/products' element={<AllProducts makeup={makeup}/>} />
 
 
-          {/* <Route path='/cart' element={<Cart />} /> */}
+          <Route path='/cart' element={<Cart />} />
           <Route path='/signin' element={<SignIn />} />
 
 
