@@ -26,6 +26,9 @@ const LipstickId = (props) => {
                 <h3>{selectLipstick.name}</h3>
                 <h3>{selectLipstick.description}</h3>
                 <br />
+                <div>
+                    <button>Add to Cart</button>
+                </div>
             </div>
         )
 

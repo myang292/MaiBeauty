@@ -26,6 +26,9 @@ const FoundationId = (props) => {
                 <h3>{selectFoundation.name}</h3>
                 <h3>{selectFoundation.description}</h3>
                 <br />
+                <div>
+                    <button>Add to Cart</button>
+                </div>
             </div>
         )
 

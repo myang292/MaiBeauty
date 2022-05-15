@@ -28,8 +28,6 @@ const Foundation = (props) => {
                     )
                 })}
             </div>
-
-            <Comment />
         </div>
     )
 }

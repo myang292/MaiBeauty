@@ -26,6 +26,9 @@ const BrowsId = (props) => {
                 <h3>{selectBrows.name}</h3>
                 <h3>{selectBrows.description}</h3>
                 <br />
+                <div>
+                    <button>Add to Cart</button>
+                </div>
             </div>
         )
 

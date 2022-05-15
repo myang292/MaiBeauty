@@ -26,6 +26,9 @@ const BronzerId = (props) => {
                 <h3>{selectBronzer.name}</h3>
                 <h3>{selectBronzer.description}</h3>
                 <br />
+                <div>
+                    <button>Add to Cart</button>
+                </div>
             </div>
         )
 
