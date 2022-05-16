@@ -34,8 +34,8 @@ const FoundationId = (props) => {
                     <div className='products'>
                         <h3>{selectFoundation.name}</h3>
                         <img src={selectFoundation.photoUrl} alt='' />
-                        <h3>${selectFoundation.price}</h3>
-                        <h3>{selectFoundation.description}</h3>
+                        <p>${selectFoundation.price}</p>
+                        <p>{selectFoundation.description}</p>
                     </div>
                 </div>
                     <br />

@@ -33,8 +33,8 @@ const LipstickId = (props) => {
                 <div className='products'>
                     <h3>{selectLipstick.name}</h3>
                     <img src={selectLipstick.photoUrl} alt='' />
-                    <h3>${selectLipstick.price}</h3>
-                    <h3>{selectLipstick.description}</h3>
+                    <p>${selectLipstick.price}</p>
+                    <p>{selectLipstick.description}</p>
                 </div>
                 <br />
                 <div>

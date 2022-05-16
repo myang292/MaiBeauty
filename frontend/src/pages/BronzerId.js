@@ -33,8 +33,8 @@ const BronzerId = (props) => {
                 <div className='products'>
                     <h3>{selectBronzer.name}</h3>
                     <img src={selectBronzer.photoUrl} alt='' />
-                    <h3>${selectBronzer.price}</h3>
-                    <h3>{selectBronzer.description}</h3>
+                    <p>${selectBronzer.price}</p>
+                    <p>{selectBronzer.description}</p>
                 </div>
                 <br />
                 <div>

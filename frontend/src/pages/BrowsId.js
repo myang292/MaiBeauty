@@ -32,8 +32,8 @@ const BrowsId = (props) => {
                 <div className='products'>
                     <h3>{selectBrows.name}</h3>
                     <img src={selectBrows.photoUrl} alt='' />
-                    <h3>${selectBrows.price}</h3>
-                    <h3>{selectBrows.description}</h3>
+                    <p>${selectBrows.price}</p>
+                    <p>{selectBrows.description}</p>
                 </div>
                 <br />
                 <div>
