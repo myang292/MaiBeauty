@@ -1,9 +1,26 @@
 .App {
   text-align: center;
+  font-family: 'Italiana', serif;
+  background-color: white;
+  opacity: .85;
+  margin: 3%;
+  border-radius: 5%;
+}
+
+body {
+  background-image: url('https://img.freepik.com/free-vector/hand-drawn-floral-pattern-peach-tones_52683-67321.jpg?w=2000');
+  background-size: cover;
+}
+
+.div1 {
+  padding: 5%;
+}
+
+.div2 {
+  padding: 5%;
 }
 
 footer {
-  background-color: white;
   bottom: 0;
   left:0;
   right:0;
@@ -13,17 +30,28 @@ footer {
 }
 
 h1 {
+  color: #B4D3B2;
   font-size: 4em;
+  font-weight: 700;
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
   text-align: right;
 }
 
+h3 {
+  color: #93C572;
+  font-weight: 700;
+
+}
+
 h4 {
+  color: #93C572;
+  font-weight: 700;
+
   float: left;
-  padding-left: 15%;
   font-size: 2em;
+  padding-left: 15%;
 }
 
 img {
@@ -39,11 +67,12 @@ img {
 
 .nav :hover {
   cursor: pointer;
+  color: palevioletred;
 }
 
 .nav :visited {
-  text-decoration: none;
-  color: black;
+  /* text-decoration: none; */
+  /* color: black; */
 }
 
 .products {

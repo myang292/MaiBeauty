@@ -11,8 +11,6 @@ const Footer = () => {
                 <img src ='https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_256px.png' style={{height:30}} onClick={() => window.open('mailto:myang292@gmail.com')}/>
             </footer>
         </div>
-
-
     )
 }
 

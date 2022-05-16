@@ -72,6 +72,7 @@ function App() {
       </h1>
       <Nav />
       <SignInNav />
+      <br />
       <Footer />
       <main>
         <Routes>
@@ -94,6 +95,7 @@ function App() {
 
         </Routes>
       </main>
+      <br />
     </div>
   );
 }
