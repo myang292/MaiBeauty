@@ -9,7 +9,9 @@
 
 body {
   background-image: url('https://img.freepik.com/free-vector/hand-drawn-floral-pattern-peach-tones_52683-67321.jpg?w=2000');
-  background-size:auto;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .div1 {
@@ -29,29 +31,37 @@ footer {
   padding: 10px;
 }
 
+footer :hover {
+  cursor: pointer;
+}
+
 h1 {
-  color: #B4D3B2;
+  color: #93C572;
   font-size: 4em;
   font-weight: 700;
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
   text-align: right;
+  text-decoration: underline;
+  text-decoration-color: palevioletred;
 }
 
 h3 {
   color: #93C572;
   font-weight: 700;
-
+  text-decoration: underline;
+  text-decoration-color: #93C572;
 }
 
 h4 {
   color: #93C572;
   font-weight: 700;
-
   float: left;
   font-size: 2em;
   padding-left: 15%;
+  text-decoration: underline;
+  text-decoration-color: #93C572;
 }
 
 img {
@@ -72,16 +82,21 @@ img :hover {
 .nav :hover {
   cursor: pointer;
   color: palevioletred;
+  text-decoration: none;
 }
 
 .nav :visited {
-  /* text-decoration: none; */
+  text-decoration: none;
   /* color: black; */
 }
 
 .products {
   max-width: 200px;
   max-height: 200px;
+}
+
+.products {
+  cursor: pointer;
 }
 
 .signin {
