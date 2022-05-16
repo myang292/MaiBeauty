@@ -24,6 +24,7 @@ const FoundationId = (props) => {
                 <br />
                 <img src={selectFoundation.photoUrl} alt='' />
                 <h3>{selectFoundation.name}</h3>
+                <h3>${selectFoundation.price}</h3>
                 <h3>{selectFoundation.description}</h3>
                 <br />
                 <div>

@@ -17,6 +17,7 @@ const BronzerId = (props) => {
         }, [])
 
     // let Navigate = useNavigate()
+// console.log(selectBronzer)
 
     if (selectBronzer) {
         return(
@@ -24,6 +25,7 @@ const BronzerId = (props) => {
                 <br />
                 <img src={selectBronzer.photoUrl} alt='' />
                 <h3>{selectBronzer.name}</h3>
+                <h3>${selectBronzer.price}</h3>
                 <h3>{selectBronzer.description}</h3>
                 <br />
                 <div>
