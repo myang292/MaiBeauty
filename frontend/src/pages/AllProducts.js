@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom'
 
 
-const AllProducts = () => {
+const AllProducts = (props) => {
 
     let navigate = useNavigate()
     const face = () => {
@@ -14,10 +14,13 @@ const AllProducts = () => {
     const lips = () => {
         navigate(`/lip`)
     }
+    const nav = (makeup) => {
+        navigate(`/${makeup.name}`)
+    }
 
     return(
         <div className='wrapperId'>
-            <div className='productParent'>
+            {/* <div className='productParent'>
                 <div className='product1'>
                     <h3>Face</h3>
                     <img src='https://static.wixstatic.com/media/d8d143_c030875a175a42f38071cef15d485dff~mv2.jpg/v1/fill/w_350,h_350,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/RTW-Face-foundation.jpg' alt='' className='products' onClick={face}/>
@@ -33,7 +36,19 @@ const AllProducts = () => {
                 <div className='product4'>
                 
                 </div>
-            </div> 
+            </div>  */}
+            <div className='wrapperId'>
+                {props.makeup.map((makeup) => {
+                    return(
+                        <div className='products'>
+                            <h3>{makeup.name[0].toUpperCase()}{makeup.name.slice(1)}</h3>
+                            <br />
+                            <img src={makeup.photoUrl} alt='' onClick={() => nav(makeup)} key={makeup._id}/>
+                            {/* {makeup.description} */}
+                        </div>
+                    )
+                })}
+            </div>
         </div> 
     )
 }

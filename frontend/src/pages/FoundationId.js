@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-// import { useContext } from 'react'
-// import { CartContext } from "../components/Cart";
+import { useContext } from 'react'
+import { CartContext } from "../components/Cart";
 
 
 const FoundationId = (props) => {
@@ -10,7 +10,7 @@ const FoundationId = (props) => {
     let {id} = useParams()
 
     const [selectFoundation, setFoundation] = useState('')
-    // const {cart, setCart} = useContext(CartContext)
+    const {cart, setCart} = useContext(CartContext)
 
 
     useEffect(() => {
@@ -20,9 +20,9 @@ const FoundationId = (props) => {
             setFoundation(selectFoundation)
         }, [id, props.foundation])
 
-    // const addToCart = (value) => {
-    //     setCart(value)
-    // }
+    const addToCart = (value) => {
+        setCart(value)
+    }
 
     // let Navigate = useNavigate()
 
@@ -40,7 +40,7 @@ const FoundationId = (props) => {
                 </div>
                     <br />
                     <div>
-                        <button>Add to Cart</button>
+                        <button onClick={addToCart}>Add to Cart</button>
                     </div>
             </div>
         )
