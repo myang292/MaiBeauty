@@ -12,9 +12,6 @@ const Lipstick = (props) => {
 
     return(
         <div>
-            
-            <br />
-            <br />
             <div>
                 {props.lipstick.map((lipstick) => {
                     return(
@@ -27,8 +24,6 @@ const Lipstick = (props) => {
                     )
                 })}
             </div>
-            <br />
-            <br />
         </div>
     )
 }

@@ -12,9 +12,6 @@ const Brows = (props) => {
 
     return(
         <div>
-            
-            <br />
-            <br />
             <div>
                 {props.brows.map((brows) => {
                     return(
@@ -27,8 +24,6 @@ const Brows = (props) => {
                     )
                 })}
             </div>
-            <br />
-            <br />
         </div>
     )
 }

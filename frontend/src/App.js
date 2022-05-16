@@ -73,7 +73,8 @@ function App() {
       <Nav />
       <SignInNav />
       <br />
-      <Footer />
+      <br />
+      <br />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -92,10 +93,9 @@ function App() {
 
           <Route path='/cart' element={<Cart />} />
           <Route path='/signin' element={<SignIn />} />
-
         </Routes>
       </main>
-      <br />
+      <Footer />
     </div>
   );
 }

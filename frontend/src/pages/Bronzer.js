@@ -12,9 +12,6 @@ const Bronzer = (props) => {
 
     return(
         <div>
-            
-            <br />
-            <br />
             <div>
                 {props.bronzer.map((bronzer) => {
                     return(
@@ -27,8 +24,6 @@ const Bronzer = (props) => {
                     )
                 })}
             </div>
-            <br />
-            <br />
         </div>
     )
 }

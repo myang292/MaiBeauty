@@ -12,9 +12,6 @@ const Foundation = (props) => {
 
     return(
         <div>
-            
-            <br />
-            <br />
             <div>
                 {props.foundation.map((foundation) => {
                     return(
@@ -27,8 +24,6 @@ const Foundation = (props) => {
                     )
                 })}
             </div>
-            <br />
-            <br />
         </div>
     )
 }
