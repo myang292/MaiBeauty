@@ -33,8 +33,10 @@ const AllProducts = () => {
                 <h3>Lips</h3>
             </div>
             <div className='product4'>
-                
+            
             </div>
+            <br />
+            <br />
         </div> 
     )
 }

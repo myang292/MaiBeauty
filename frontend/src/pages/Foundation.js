@@ -27,6 +27,8 @@ const Foundation = (props) => {
                     )
                 })}
             </div>
+            <br />
+            <br />
         </div>
     )
 }

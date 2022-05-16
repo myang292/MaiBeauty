@@ -28,12 +28,14 @@ const LipstickId = (props) => {
 
     if (selectLipstick) {
         return(
-            <div className=''>
+            <div className='wrapper'>
                 <br />
-                <img src={selectLipstick.photoUrl} alt='' />
-                <h3>{selectLipstick.name}</h3>
-                <h3>${selectLipstick.price}</h3>
-                <h3>{selectLipstick.description}</h3>
+                <div className='products'>
+                    <img src={selectLipstick.photoUrl} alt='' />
+                    <h3>{selectLipstick.name}</h3>
+                    <h3>${selectLipstick.price}</h3>
+                    <h3>{selectLipstick.description}</h3>
+                </div>
                 <br />
                 <div>
                     {/* <button onClick={addToCart}>Add to Cart</button> */}

@@ -27,12 +27,14 @@ const BrowsId = (props) => {
 
     if (selectBrows) {
         return(
-            <div className=''>
+            <div className='wrapper'>
                 <br />
-                <img src={selectBrows.photoUrl} alt='' />
-                <h3>{selectBrows.name}</h3>
-                <h3>${selectBrows.price}</h3>
-                <h3>{selectBrows.description}</h3>
+                <div className='products'>
+                    <img src={selectBrows.photoUrl} alt='' />
+                    <h3>{selectBrows.name}</h3>
+                    <h3>${selectBrows.price}</h3>
+                    <h3>{selectBrows.description}</h3>
+                </div>
                 <br />
                 <div>
                     {/* <button onClick={addToCart}>Add to Cart</button> */}

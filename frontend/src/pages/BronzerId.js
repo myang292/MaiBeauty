@@ -28,12 +28,14 @@ const BronzerId = (props) => {
 
     if (selectBronzer) {
         return(
-            <div className=''>
+            <div className='wrapper'>
                 <br />
-                <img src={selectBronzer.photoUrl} alt='' />
-                <h3>{selectBronzer.name}</h3>
-                <h3>${selectBronzer.price}</h3>
-                <h3>{selectBronzer.description}</h3>
+                <div className='products'>
+                    <img src={selectBronzer.photoUrl} alt='' />
+                    <h3>{selectBronzer.name}</h3>
+                    <h3>${selectBronzer.price}</h3>
+                    <h3>{selectBronzer.description}</h3>
+                </div>
                 <br />
                 <div>
                     {/* <button onClick={addToCart}>Add to Cart</button> */}

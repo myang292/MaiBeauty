@@ -27,6 +27,8 @@ const Bronzer = (props) => {
                     )
                 })}
             </div>
+            <br />
+            <br />
         </div>
     )
 }

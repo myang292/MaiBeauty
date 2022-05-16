@@ -27,6 +27,8 @@ const Lipstick = (props) => {
                     )
                 })}
             </div>
+            <br />
+            <br />
         </div>
     )
 }

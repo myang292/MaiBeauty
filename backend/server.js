@@ -76,6 +76,21 @@ app.get('/api/makeup/:id', async (req, res) => {
 
 // CRUD!!!!
 
+// app.post('/api/cart', (req, res) => {
+//     let qty = parseInt(req.body.qty, 10);
+//     let product = parseInt(req.body.product_id, 10);
+//     if(qty > 0 && Security.isValidNonce(req.body.nonce, req)) {
+//       Products.findOne({product_id: product}).then(prod => {
+//           Cart.addToCart(prod, qty);
+//           Cart.saveCart(req);
+//           res.redirect('/cart');
+//       }).catch(err => {
+//          res.redirect('/');
+//       });
+//   } else {
+//       res.redirect('/');
+//   }
+
 // app.post('/api/addToCart', async (req, res) => {
 //         const addReview = await req.body
 //             Pokemon.insertMany(addReview)

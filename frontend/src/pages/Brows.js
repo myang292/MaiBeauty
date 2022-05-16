@@ -27,6 +27,8 @@ const Brows = (props) => {
                     )
                 })}
             </div>
+            <br />
+            <br />
         </div>
     )
 }
