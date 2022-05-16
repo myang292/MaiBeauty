@@ -1,7 +1,9 @@
 
-import { Route, Routes } from 'react-router-dom'
 import './style/App.css';
+import axios from 'axios'
+import { Route, Routes } from 'react-router-dom'
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import AllProducts from './pages/AllProducts'
 import Bronzer from './pages/Bronzer'
 import BronzerId from './pages/BronzerId'
@@ -20,9 +22,15 @@ import Lipstick from './pages/Lipstick'
 import LipstickId from './pages/LipstickId'
 import SignInNav from './components/SignInNav'
 import SignIn from './pages/SignIn'
-import axios from 'axios'
+
+
 
 function App() {
+
+  let navigate = useNavigate()
+  const nav = () => {
+      navigate(`/`)
+  }
 
   const [foundation, setFoundation] = useState([])
   const [bronzer, setBronzer] = useState([])
@@ -67,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
+      <h1 onClick={nav}>
         MaiBeauty
       </h1>
       <Nav />

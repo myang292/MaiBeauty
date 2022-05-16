@@ -12,10 +12,10 @@ const Foundation = (props) => {
 
     return(
         <div>
-            <div>
+            <div className='wrapper'>
                 {props.foundation.map((foundation) => {
                     return(
-                        <div>
+                        <div className='products'>
                             {foundation.name}
                             <br />
                             <img src={foundation.photoUrl} alt='' onClick={() => nav(foundation)} key={foundation._id}/>

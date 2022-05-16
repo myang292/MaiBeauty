@@ -18,6 +18,10 @@ body {
   padding: 5%;
 }
 
+.div1 :hover {
+  opacity: 1;
+}
+
 .div2 {
   padding: 5%;
 }
@@ -45,6 +49,11 @@ h1 {
   text-align: right;
   text-decoration: underline;
   text-decoration-color: palevioletred;
+  cursor: pointer;
+}
+
+h1:hover {
+  font-weight: bolder;
 }
 
 h3 {
@@ -52,6 +61,10 @@ h3 {
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: #93C572;
+}
+
+h3 :hover {
+  cursor: pointer;
 }
 
 h4 {
@@ -67,16 +80,19 @@ h4 {
 img {
   max-width: 200px;
   max-height: 200px;
+  cursor: pointer;
 }
 
 img :hover {
   cursor: pointer;
+
 }
 
 .nav {
   float: left;
   padding-left: 2%;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .nav :hover {
@@ -87,15 +103,11 @@ img :hover {
 
 .nav :visited {
   text-decoration: none;
-  /* color: black; */
 }
 
 .products {
   max-width: 200px;
   max-height: 200px;
-}
-
-.products {
   cursor: pointer;
 }
 
@@ -103,11 +115,15 @@ img :hover {
   float: right;
   padding-right: 2%;
   text-decoration: none;
+  font-size: 20px;
+
 }
 
 .signin :hover {
   cursor: pointer;
   color: palevioletred;
+  text-decoration: none;
+
 }
 
 .signin :visited {
@@ -119,6 +135,10 @@ img :hover {
   max-width: 250px;
   max-height: 250px;
   margin: 10px;
+}
+
+.whatsNew :hover {
+  cursor: pointer;
 }
 
 

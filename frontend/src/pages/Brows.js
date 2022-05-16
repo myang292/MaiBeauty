@@ -12,10 +12,10 @@ const Brows = (props) => {
 
     return(
         <div>
-            <div>
+            <div className='wrapper'>
                 {props.brows.map((brows) => {
                     return(
-                        <div>
+                        <div className='products'>
                             {brows.name}
                             <br />
                             <img src={brows.photoUrl} alt='' onClick={() => nav(brows)} key={brows._id}/>

@@ -12,10 +12,10 @@ const Lipstick = (props) => {
 
     return(
         <div>
-            <div>
+            <div className='wrapper'>
                 {props.lipstick.map((lipstick) => {
                     return(
-                        <div>
+                        <div className='products'>
                             {lipstick.name}
                             <br />
                             <img src={lipstick.photoUrl} alt='' onClick={() => nav(lipstick)} key={lipstick._id}/>

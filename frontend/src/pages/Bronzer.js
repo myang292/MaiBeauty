@@ -11,11 +11,11 @@ const Bronzer = (props) => {
     console.log(props)
 
     return(
-        <div>
-            <div>
+        <div >
+            <div className='wrapper'>
                 {props.bronzer.map((bronzer) => {
                     return(
-                        <div>
+                        <div className='products'>
                             {bronzer.name}
                             <br />
                             <img src={bronzer.photoUrl} alt='' onClick={() => nav(bronzer)} key={bronzer._id}/>

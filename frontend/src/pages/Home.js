@@ -18,11 +18,11 @@ const Home = () => {
     }
 
     return(
-        <div>
+        <div className='wrapper'>
             <div className='parent'>
                 <div className='div1'>
                     <br />
-                    <h3>Girly Girl Lipstick</h3>
+                    <h3 onClick={lipstick}>Girly Girl Lipstick</h3>
                     <p>A new shade in our collection of soft matte lipsticks. Girly Girl is a true soft pink that will match any skin tone. Pair it with a nude or brown lip liner to create a gradient effect.</p>
                 </div>
                 <div className='div2'>
