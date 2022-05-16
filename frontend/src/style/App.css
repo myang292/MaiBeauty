@@ -12,6 +12,7 @@ body {
   background-size:cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-weight: 900;
 }
 
 .div1 {
@@ -58,9 +59,11 @@ h1:hover {
 
 h3 {
   color: #93C572;
+  font-size: 1.5em;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: #93C572;
+
 }
 
 h3 :hover {
@@ -107,8 +110,21 @@ img :hover {
 }
 
 .products {
-  max-width: 200px;
-  max-height: 200px;
+  /* max-width: 200px;
+  max-height: 200px; */
+  cursor: pointer;
+}
+
+.product1 :hover {
+  cursor: pointer;
+  opacity:100% ;
+}
+
+.product2 :hover {
+  cursor: pointer;
+}
+
+.product3 :hover {
   cursor: pointer;
 }
 
@@ -145,6 +161,15 @@ img :hover {
 
 .whatsNew :hover {
   cursor: pointer;
+}
+
+.wrapperId {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* margin: 100px 0 0 0;
+  padding-bottom: 100px; */
+  align-items: center;
 }
 
 
@@ -199,6 +224,7 @@ img :hover {
     flex-wrap: wrap;
     margin: 100px 0 0 0;
     padding-bottom: 100px;
+    align-items: center;
   }
 
   .products{
@@ -209,4 +235,5 @@ img :hover {
     background-color: white;
     border-radius: 10px;
     padding-bottom: 5px;
+    align-items: center;
   }

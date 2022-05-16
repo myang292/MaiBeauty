@@ -28,11 +28,11 @@ const BronzerId = (props) => {
 
     if (selectBronzer) {
         return(
-            <div className='wrapper'>
+            <div className='wrapperId'>
                 <br />
                 <div className='products'>
-                    <img src={selectBronzer.photoUrl} alt='' />
                     <h3>{selectBronzer.name}</h3>
+                    <img src={selectBronzer.photoUrl} alt='' />
                     <h3>${selectBronzer.price}</h3>
                     <h3>{selectBronzer.description}</h3>
                 </div>

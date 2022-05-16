@@ -15,7 +15,7 @@ const Brows = (props) => {
             <div className='title'>
                 Brows
             </div>
-            <div className='wrapper'>
+            <div className='wrapperId'>
                 {props.brows.map((brows) => {
                     return(
                         <div className='products'>

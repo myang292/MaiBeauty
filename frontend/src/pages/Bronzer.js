@@ -15,7 +15,7 @@ const Bronzer = (props) => {
             <div className='title'>
                 Bronzer
             </div>
-            <div className='wrapper'>
+            <div className='wrapperId'>
                 {props.bronzer.map((bronzer) => {
                     return(
                         <div className='products'>

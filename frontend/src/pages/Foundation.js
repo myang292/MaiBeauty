@@ -15,7 +15,7 @@ const Foundation = (props) => {
             <div className='title'>
                 Foundation
             </div>
-            <div className='wrapper'>
+            <div className='wrapperId'>
                 {props.foundation.map((foundation) => {
                     return(
                         <div className='products'>
