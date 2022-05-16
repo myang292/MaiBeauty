@@ -89,10 +89,8 @@ function App() {
           <Route path='/lipstick/:id' element={<LipstickId lipstick={lipstick}/>} />
           <Route path='/products' element={<AllProducts makeup={makeup}/>} />
 
-
           <Route path='/cart' element={<Cart />} />
           <Route path='/signin' element={<SignIn />} />
-
 
         </Routes>
       </main>

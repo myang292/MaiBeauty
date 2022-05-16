@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+// import { useContext } from 'react'
+// import { CartContext } from "../components/Cart";
 
 
 const BronzerId = (props) => {
@@ -8,16 +10,21 @@ const BronzerId = (props) => {
     let {id} = useParams()
 
     const [selectBronzer, setBronzer] = useState('')
+    // const {cart, setCart} = useContext(CartContext)
 
     useEffect(() => {
         let selectBronzer = props.bronzer.find(
             (bronzer) => bronzer._id === id
             )
             setBronzer(selectBronzer)
-        }, [])
+        }, [id, props.bronzer])
+
+    // const addToCart = (value) => {
+    //     setCart(value)
+    // }
 
     // let Navigate = useNavigate()
-// console.log(selectBronzer)
+    // console.log(selectBronzer)
 
     if (selectBronzer) {
         return(
@@ -29,7 +36,7 @@ const BronzerId = (props) => {
                 <h3>{selectBronzer.description}</h3>
                 <br />
                 <div>
-                    <button>Add to Cart</button>
+                    {/* <button onClick={addToCart}>Add to Cart</button> */}
                 </div>
             </div>
         )

@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import Comment from '../components/Comment'
 
 const Bronzer = (props) => {
 
@@ -28,8 +27,6 @@ const Bronzer = (props) => {
                     )
                 })}
             </div>
-
-            <Comment />
         </div>
     )
 }

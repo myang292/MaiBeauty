@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+// import { useContext } from 'react'
+// import { CartContext } from "../components/Cart";
 
 
 const LipstickId = (props) => {
@@ -8,13 +10,19 @@ const LipstickId = (props) => {
     let {id} = useParams()
 
     const [selectLipstick, setLipstick] = useState('')
+    // const {cart, setCart} = useContext(CartContext)
+
 
     useEffect(() => {
         let selectLipstick = props.lipstick.find(
             (lipstick) => lipstick._id === id
             )
             setLipstick(selectLipstick)
-        }, [])
+        }, [id, props.lipstick])
+
+    // const addToCart = (value) => {
+    //     setCart(value)
+    // }
 
     // let Navigate = useNavigate()
 
@@ -28,7 +36,7 @@ const LipstickId = (props) => {
                 <h3>{selectLipstick.description}</h3>
                 <br />
                 <div>
-                    <button>Add to Cart</button>
+                    {/* <button onClick={addToCart}>Add to Cart</button> */}
                 </div>
             </div>
         )

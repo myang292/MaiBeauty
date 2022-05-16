@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+// import { useContext } from 'react'
+// import { CartContext } from "../components/Cart";
 
 
 const BrowsId = (props) => {
@@ -8,15 +10,20 @@ const BrowsId = (props) => {
     let {id} = useParams()
 
     const [selectBrows, setBrows] = useState('')
+    // const {cart, setCart} = useContext(CartContext)
+
 
     useEffect(() => {
         let selectBrows = props.brows.find(
             (brows) => brows._id === id
             )
             setBrows(selectBrows)
-        }, [])
+        }, [id, props.brows])
 
-    // let Navigate = useNavigate()
+
+    // const addToCart = (value) => {
+    //     setCart(value)
+    // }
 
     if (selectBrows) {
         return(
@@ -28,7 +35,7 @@ const BrowsId = (props) => {
                 <h3>{selectBrows.description}</h3>
                 <br />
                 <div>
-                    <button>Add to Cart</button>
+                    {/* <button onClick={addToCart}>Add to Cart</button> */}
                 </div>
             </div>
         )
