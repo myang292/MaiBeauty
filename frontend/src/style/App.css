@@ -93,6 +93,7 @@ img :hover {
   padding-left: 2%;
   text-decoration: none;
   font-size: 20px;
+  color: #93C572;
 }
 
 .nav :hover {
@@ -102,7 +103,7 @@ img :hover {
 }
 
 .nav :visited {
-  text-decoration: none;
+  color: palevioletred;
 }
 
 .products {
@@ -116,19 +117,24 @@ img :hover {
   padding-right: 2%;
   text-decoration: none;
   font-size: 20px;
-
+  color: #93C572;
 }
 
 .signin :hover {
   cursor: pointer;
   color: palevioletred;
   text-decoration: none;
-
 }
 
 .signin :visited {
   text-decoration: none;
-  /* color: black; */
+  color: palevioletred;
+}
+
+.title {
+  font-size: 2em;
+  color: #93C572;
+
 }
 
 .whatsNew {

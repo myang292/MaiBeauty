@@ -12,6 +12,9 @@ const Brows = (props) => {
 
     return(
         <div>
+            <div className='title'>
+                Brows
+            </div>
             <div className='wrapper'>
                 {props.brows.map((brows) => {
                     return(

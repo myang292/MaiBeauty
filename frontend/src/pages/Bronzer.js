@@ -11,7 +11,10 @@ const Bronzer = (props) => {
     console.log(props)
 
     return(
-        <div >
+        <div>
+            <div className='title'>
+                Bronzer
+            </div>
             <div className='wrapper'>
                 {props.bronzer.map((bronzer) => {
                     return(

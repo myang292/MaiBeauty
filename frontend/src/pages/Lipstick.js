@@ -12,6 +12,9 @@ const Lipstick = (props) => {
 
     return(
         <div>
+            <div className='title'>
+                Lipsticks
+            </div>
             <div className='wrapper'>
                 {props.lipstick.map((lipstick) => {
                     return(

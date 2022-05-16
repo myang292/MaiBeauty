@@ -18,7 +18,7 @@ const Home = () => {
     }
 
     return(
-        <div className='wrapper'>
+        <div>
             <div className='parent'>
                 <div className='div1'>
                     <br />

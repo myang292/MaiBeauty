@@ -12,6 +12,9 @@ const Foundation = (props) => {
 
     return(
         <div>
+            <div className='title'>
+                Foundation
+            </div>
             <div className='wrapper'>
                 {props.foundation.map((foundation) => {
                     return(
