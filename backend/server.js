@@ -71,33 +71,35 @@ app.get('/api/makeup/:id', async (req, res) => {
 })
 
 
-//CREATE working
-app.post('/api/addBronzer'), async (req, res) => {
+
+
+//CREATE 
+app.post('/api/addBronzer', async (req, res) => {
     const addNewBronzer = await req.body
-    Bronzer.insertOne(addNewBronzer)
+    Bronzer.insertMany(addNewBronzer)
     return res.status(201).json({Bronzer})
-}
+})
 
-app.post('/api/addBrow'), async (req, res) => {
+app.post('/api/addBrow', async (req, res) => {
     const addNewBrows = await req.body
-    Brows.insertOne(addNewBrows)
+    Brows.insertMany(addNewBrows)
     return res.status(201).json({Brows})
-}
+})
 
-app.post('/api/addFoundation'), async (req, res) => {
+app.post('/api/addFoundation', async (req, res) => {
     const addNewFoundation = await req.body
-    Foundation.insertOne(addNewFoundation)
+    Foundation.insertMany(addNewFoundation)
     return res.status(201).json({Foundation})
-}
+})
 
-app.post('/api/addLipstick'), async (req, res) => {
+app.post('/api/addLipstick', async (req, res) => {
     const addNewLipstick = await req.body
-    Lipstick.insertOne(addNewLipstick)
+    Lipstick.insertMany(addNewLipstick)
     return res.status(201).json({Lipstick})
-}
+})
 
 
-//UPDATE
+//UPDATE working
 app.put('/api/editBronzer/:id', async (req, res) => {
     const { name, description, photoUrl, price } = await req.body;
     try {
