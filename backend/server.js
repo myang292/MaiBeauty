@@ -72,7 +72,6 @@ app.get('/api/makeup/:id', async (req, res) => {
 
 
 
-
 //CREATE 
 app.post('/api/addBronzer', async (req, res) => {
     const addNewBronzer = await req.body
@@ -99,7 +98,7 @@ app.post('/api/addLipstick', async (req, res) => {
 })
 
 
-//UPDATE working
+//UPDATE 
 app.put('/api/editBronzer/:id', async (req, res) => {
     const { name, description, photoUrl, price } = await req.body;
     try {
