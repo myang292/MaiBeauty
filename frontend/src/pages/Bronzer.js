@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import AddBronzer from '../components/AddBronzer'
+import UpdateBronzer from '../components/UpdateBronzer'
 
 const Bronzer = (props) => {
 
@@ -28,6 +29,7 @@ const Bronzer = (props) => {
                     )
                 })}
                 <AddBronzer />
+                <UpdateBronzer />
             </div>
         </div>
     )

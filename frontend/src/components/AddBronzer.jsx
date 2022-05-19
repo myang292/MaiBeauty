@@ -5,6 +5,8 @@ import axios from 'axios'
 
 const AddBronzer = (props) => {
 
+    const [update, setUpdate] = useState(false)
+
     const url = 'http://localhost:3001/api/addBronzer'
     const [data, setData] = useState({
         name:'',
@@ -36,17 +38,20 @@ const AddBronzer = (props) => {
     return(
 
         <div className='add-options'>
-            <form onSubmit = { submit } >
-                <input type='text' id={'name'} name={'name'} placeholder={'Bronzer Shade'} onChange = {(e) => onChange(e)} />
-                <br />
-                <input type='text' id={'description'} name={'weidescriptionght'} placeholder={'Description'} onChange = {(e) => onChange(e)} />
-                <br />
-                <input type='text' id={'photoUrl'} name={'photoUrl'} placeholder={'Image URL'} onChange = {(e) => onChange(e)} />
-                <br />
-                <input type='price' id={'price'} name={'price'} placeholder={'Price'} onChange = {(e) => onChange(e)} />
-                <br />
-                <button className='types-search-button'>Submit</button>
-            </form>
+            {update?
+                <form onSubmit = { submit } >
+                    <input type='text' id={'name'} name={'name'} placeholder={'Bronzer Shade'} onChange = {(e) => onChange(e)} />
+                    <br />
+                    <input type='text' id={'description'} name={'weidescriptionght'} placeholder={'Description'} onChange = {(e) => onChange(e)} />
+                    <br />
+                    <input type='text' id={'photoUrl'} name={'photoUrl'} placeholder={'Image URL'} onChange = {(e) => onChange(e)} />
+                    <br />
+                    <input type='price' id={'price'} name={'price'} placeholder={'Price'} onChange = {(e) => onChange(e)} />
+                    <br />
+                    <button className='types-search-button'>Add</button>
+                </form>:
+                <button onClick={() => setUpdate(true)}>Add a New Shade</button> 
+            }
         </div>
 
 
