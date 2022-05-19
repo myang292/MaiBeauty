@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
     res.send('Okayyyyy')
 })
 
+//READ
 app.get('/api/bronzer', async (req, res) => {
     const allBronzers = await Bronzer.find({});
     res.send(allBronzers);
@@ -58,7 +59,6 @@ app.get('/api/lipstick/:id', async (req, res) => {
     res.json(oneLipstick)
 })
 
-
 app.get('/api/makeup', async (req, res) => {
         const allMakeup = await Makeup.find({})
         res.send(allMakeup)
@@ -71,48 +71,110 @@ app.get('/api/makeup/:id', async (req, res) => {
 })
 
 
+//CREATE working
+app.post('/api/addBronzer'), async (req, res) => {
+    const addNewBronzer = await req.body
+    Bronzer.insertOne(addNewBronzer)
+    return res.status(201).json({Bronzer})
+}
+
+app.post('/api/addBrow'), async (req, res) => {
+    const addNewBrows = await req.body
+    Brows.insertOne(addNewBrows)
+    return res.status(201).json({Brows})
+}
+
+app.post('/api/addFoundation'), async (req, res) => {
+    const addNewFoundation = await req.body
+    Foundation.insertOne(addNewFoundation)
+    return res.status(201).json({Foundation})
+}
+
+app.post('/api/addLipstick'), async (req, res) => {
+    const addNewLipstick = await req.body
+    Lipstick.insertOne(addNewLipstick)
+    return res.status(201).json({Lipstick})
+}
+
+
+//UPDATE
+app.put('/api/editBronzer/:id', async (req, res) => {
+    const { name, description, photoUrl, price } = await req.body;
+    try {
+    const updateOne = await Bronzer.findByIdAndUpdate(req.params.id, { name, description, photoUrl, price }, {new:true})
+    res.status(200).send('bronzer update working')
+    } catch (e) {
+        return res.status(500).json({error:e.message})
+    }
+})
+
+app.put('/api/editBrows/:id', async (req, res) => {
+    const { name, description, photoUrl, price } = await req.body;
+    try {
+    const updateOne = await Brows.findByIdAndUpdate(req.params.id, { name, description, photoUrl, price }, {new:true})
+    res.status(200).send('brows update working')
+    } catch (e) {
+        return res.status(500).json({error:e.message})
+    }
+})
+
+app.put('/api/editFoundation/:id', async (req, res) => {
+    const { name, description, photoUrl, price } = await req.body;
+    try {
+    const updateOne = await Foundation.findByIdAndUpdate(req.params.id, { name, description, photoUrl, price }, {new:true})
+    res.status(200).send('foundation update working')
+    } catch (e) {
+        return res.status(500).json({error:e.message})
+    }
+})
+
+app.put('/api/editLipstick/:id', async (req, res) => {
+    const { name, description, photoUrl, price } = await req.body;
+    try {
+    const updateOne = await Lipstick.findByIdAndUpdate(req.params.id, { name, description, photoUrl, price }, {new:true})
+    res.status(200).send('lipstick update working')
+    } catch (e) {
+        return res.status(500).json({error:e.message})
+    }
+})
+
+
+//DELETE
+app.delete('/api/deleteBronzer/:id', async (req, res) => {
+    const { id } = req.params;
+    const deleteOne = await Bronzer.findByIdAndDelete(req.params.id)
+    return res.send(deleteOne)
+    console.log('bronzer delete works')
+})
+
+app.delete('/api/deleteBrows/:id', async (req, res) => {
+    const { id } = req.params;
+    const deleteOne = await Brows.findByIdAndDelete(req.params.id)
+    return res.send(deleteOne)
+    console.log('brows delete works')
+})
+
+app.delete('/api/deleteFoundation/:id', async (req, res) => {
+    const { id } = req.params;
+    const deleteOne = await Foundation.findByIdAndDelete(req.params.id)
+    return res.send(deleteOne)
+    console.log('foundation delete works')
+})
+
+app.delete('/api/deleteLipstick/:id', async (req, res) => {
+    const { id } = req.params;
+    const deleteOne = await Lipstick.findByIdAndDelete(req.params.id)
+    return res.send(deleteOne)
+    console.log('lipstick delete works')
+})
 
 
 
-// CRUD!!!!
 
-// app.post('/api/cart', (req, res) => {
-//     let qty = parseInt(req.body.qty, 10);
-//     let product = parseInt(req.body.product_id, 10);
-//     if(qty > 0 && Security.isValidNonce(req.body.nonce, req)) {
-//       Products.findOne({product_id: product}).then(prod => {
-//           Cart.addToCart(prod, qty);
-//           Cart.saveCart(req);
-//           res.redirect('/cart');
-//       }).catch(err => {
-//          res.redirect('/');
-//       });
-//   } else {
-//       res.redirect('/');
-//   }
 
-// app.post('/api/addToCart', async (req, res) => {
-//         const addReview = await req.body
-//             Pokemon.insertMany(addReview)
-//             return res.status(201).json({Pokemon})
-//     })
 
-// app.put('/api/editCart', async (req, res) => {
-//     const { num, name, img, type, height, weight, weakness } = await req.body;
-//     try {
-//     const updateOne = await Pokemon.findByIdAndUpdate(req.params.id, { num, name, img, type, height, weight, weakness }, {new:true})
-//     res.status(200).send('update working')
-//     } catch (e) {
-//         return res.status(500).json({error:e.message})
-//     }
-// })
 
-// app.delete('/api/deleteCart', async (req, res) => {
-//     const { id } = req.params;
-//     const deleteOne = await Pokemon.findByIdAndDelete(req.params.id)
-//     return res.send(deleteOne)
-//     console.log('delete works')
-// })
+
 
 
 app.listen(PORT, () => {
