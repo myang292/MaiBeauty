@@ -10,6 +10,7 @@ import BronzerId from './pages/BronzerId'
 import Brows from './pages/Brows'
 import BrowsId from './pages/BrowsId'
 import Cart from './pages/Cart'
+import Contact from './pages/Contact'
 import Eyes from './pages/Eyes'
 import Face from './pages/Face'
 import Footer from './components/Footer'
@@ -90,6 +91,7 @@ function App() {
           <Route path='/bronzer/:id' element={<BronzerId bronzer={bronzer}/>} />
           <Route path='/brows' element={<Brows brows={brows}/>} />
           <Route path='/brows/:id' element={<BrowsId brows={brows}/>} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/eyes' element={<Eyes brows={brows}/>} />
           <Route path='/face' element={<Face foundation={foundation} bronzer={bronzer} />} />
           <Route path='/foundation' element={<Foundation foundation={foundation}/>} />
