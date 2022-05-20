@@ -10,7 +10,11 @@ const Bronzer = (props) => {
         navigate(`${bronzer._id}`)
     }
 
-    console.log(props)
+    const deleteOne = async (bronzer) => {
+        await axios.delete(`http://localhost:3001/api/deleteBronzer/${bronzer._id}`)
+        navigate('/bronzer')
+        window.location.reload(true)
+    }
 
     return(
         <div>
@@ -24,7 +28,11 @@ const Bronzer = (props) => {
                             {bronzer.name}
                             <br />
                             <img src={bronzer.photoUrl} alt='' onClick={() => nav(bronzer)} key={bronzer._id}/>
+                            {bronzer.price}
+                            <br />
                             {bronzer.description}
+                            <br />
+                            <button key={bronzer._id} onClick={() => deleteOne(bronzer)}>Delete</button>
                         </div>
                     )
                 })}
